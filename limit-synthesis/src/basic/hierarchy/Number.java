@@ -2,12 +2,15 @@
 //represents a double
 package hierarchy;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class Number implements Expression
 {
     private double _num = 0;
     private boolean _init = false;
+    private int _locationRelativeToPreviousOperator = -1;
+    private Expression _previousOperator = null;
 
     public Number(double aNum)
     {
@@ -19,11 +22,6 @@ public class Number implements Expression
     {
         if(_init == false) throw new IllegalArgumentException("This Number has not been initialized");
         return _num;
-    }
-    
-    public void append(Expression e)
-    {
-        
     }
     
     @Override
@@ -66,5 +64,46 @@ public class Number implements Expression
     		str = ((Double)_num).toString();
     	}
     	return str;
+    }
+    
+    public String getClassName()
+    {
+    	return "Number";
+    }
+    
+    public int size()
+    {
+    	return 1;
+    }
+    public String getExpType()
+    {
+    	return "Number";
+    }
+    
+    public ArrayList<Expression> toPreOrderAL()
+    {
+    	ArrayList<Expression> result = new ArrayList<Expression>();
+    	result.add(this);
+    	return result;
+    }
+    
+    public void setPreviousOperator(Expression e)
+    {
+    	_previousOperator = e;
+    }
+    
+    public Expression getPreviousOperator()
+    {
+    	return _previousOperator;
+    }
+    
+    public void setLocationRelativeToPreviousOperator(int i)
+    {
+    	_locationRelativeToPreviousOperator = i;
+    }
+    
+    public int getLocationRelativeToPreviousOperator()
+    {
+    	return _locationRelativeToPreviousOperator;
     }
 }

@@ -3,6 +3,9 @@ package lexerAndParser;
 import java.io.*;
 import hierarchy.*;
 import java.util.ArrayList;
+
+import geneticAlgorithm.LimitExpression;
+
 import java.util.*;
 
 public class Driver2 
@@ -113,20 +116,30 @@ public class Driver2
 				System.out.println("And is it continuous at the approach value?	" 
 						+ l.isContinuousAtTarget());
 			}
+			System.out.println("And the functionSize is:        \t" + l.functionSize());
 			System.out.println("And the left handed behavior is:\t" + l.leftHandBehaviorAtTarget());
 			System.out.println("And the right handed behavior is:\t" + l.rightHandBehaviorAtTarget());
-			System.out.println();
-					
+			System.out.println();			
 		}
 		
 		
 		//Questions:
-		//line 103  ^(1/3)
+		//test.5														X
+		//set/get/append/traverse/Exptype								X
+		//cube root														X
+		//mutate
+		//rational number code
+		//domain or just is continuousAt()
+		//fitness calc
+		//generate LimitExpression
+		//crossover/mutation
+		//Adding Genetic Algorithm interfaces							
+		//line 103  ^(1/3)												X
 		//Continuity?
 		//Tan(x) continuity												X
 		//sqrt(x) continuity											X
 		//left-right continuity
-		//Function?
+		//Function?														X
 		//How to format doubles											X
 		//You can't have _target be Pi or E or Pi/2 yet.				X
 		//Parenthesis in Mathematica									X

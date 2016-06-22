@@ -25,6 +25,8 @@ public interface Expression
     
     public abstract ArrayList<Expression> toPreOrderAL();//returns an ArrayList of Expressions which is the 
     														//preOrder representation of the Expression tree.
+    														//For example, calling this method on a tree like “AbsVal(x)/(sin(2)+3)” would return 
+    														//the ArrayList <AbsVal(x)/(sin(2)+3),AbsVal(x),x,(sin(2)+3),sin(2),2,3>.
     														//calling this method makes all PreviousOperator methods more accurate.
     
     public abstract void setPreviousOperator(Expression e);//PreviousOperator methods allow us to more easily traverse the tree.
@@ -36,4 +38,9 @@ public interface Expression
     													//returns 0 if previousOperator is Unary
     													//returns 1 if this is the Exp1 of the previousOperator.
     													//returns 2 if this is the Exp2 of the previousOperator.
+    public abstract void mutateExpressionOf(LimitExpression limExp); //gives this Expression a chance to be mutated 1 of three
+    																//3 different ways: Expansion, Regression, or Substitution
+    																//After mutating this Expression, this method mutates any
+    																//member expressions as well. 
+ 
 }

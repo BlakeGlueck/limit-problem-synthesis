@@ -127,7 +127,7 @@ public class DriverGenAlg
                 // Mutate population
                 for (int i = elitismOffset; i < originalPopulation.size(); i++) 
                 {
-                    originalPopulation.getIndividual(i).mutate();
+                    originalPopulation.getIndividual(i).mutateLimitExpression();
                 }
 
                 bufferedWriter.write("Here is generation " + generationNumber);

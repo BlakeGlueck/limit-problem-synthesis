@@ -9,8 +9,6 @@ import java.util.Stack;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import geneticAlgorithm.LimitExpression;
-
 
 public class Parser 
 {

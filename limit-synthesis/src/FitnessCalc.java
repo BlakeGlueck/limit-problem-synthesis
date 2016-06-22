@@ -1,5 +1,7 @@
 package geneticAlgorithm;
 
+import hierarchy.LimitExpression;
+
 public class FitnessCalc 
 {
 	//temporary fix

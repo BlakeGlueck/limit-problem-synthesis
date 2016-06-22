@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import hierarchy.LimitExpression;
 import lexerAndParser.*;
 
 public class LimitExpressionPopulation 
